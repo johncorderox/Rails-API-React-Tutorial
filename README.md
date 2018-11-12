@@ -1,7 +1,14 @@
-# Rails-API-React-Tutorial 💻
+# Rails-API-React-Tutorial 💻 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 Hey! This is a super-easy to follow Rails/React API tutorial that is fully in depth from start to finish. This guide shows you how to install Ruby
 and Rails 5 in a Virtual Box, React JS via create-react-app and connecting the frontend and backend.
+
+## Table of Contents 
+* Downloading Virtual Box
+* Downloading create-react-app
+* Creating a Rails API
+* Create a react frontend
+* Connect the API with React
 
 
 ## Downloading Virtual Box
