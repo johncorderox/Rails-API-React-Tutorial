@@ -113,4 +113,6 @@ Let's begin!
   
 2. Let's create a test app to see if everything is running smoothly. type ``` create-react-app my-cool-app``` in the command line and see if everything installs. ``` my-cool-app``` will be the name of your react project.
 
-3. Run ``` npm start ``` and type Y in case there are some conflicting port configs in your local host. 
+3. Run ``` npm start ``` and type Y in case there are some conflicting port configs in your local host. You should see the bottom image in your browser if everything was installed correctly!
+
+<a href="http://tinypic.com?ref=2gwysso" target="_blank"><img src="http://i68.tinypic.com/2gwysso.png" border="0" alt="Image and video hosting by TinyPic"></a>
