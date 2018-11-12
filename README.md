@@ -150,3 +150,15 @@ class Application < Rails::Application
 ```
 
 Since this tutorial is mainly for testing and toy projects, we are allowing ALL methods from another domain. You should tailor the header and methods to your liking. 
+
+## Rails API Versioning
+
+Versioning is the process of seperating and creating new features/data/endpoints for your API. Since this is our first API, let's make our ```test-api``` v1.
+
+1. Run the following in your terminal 
+```shell
+mkdir mkdir app/controllers/api && mkdir app/controllers/api/v1
+```
+If everything looks right you should see your directory identical as below. <br><br>
+<a href="http://tinypic.com?ref=3589c11" target="_blank"><img src="http://i67.tinypic.com/3589c11.png" height="280" width="280" border="0" alt="Image and video hosting by TinyPic"></a>
+    
