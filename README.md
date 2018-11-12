@@ -116,3 +116,37 @@ Let's begin!
 3. Run ``` npm start ``` and type Y in case there are some conflicting port configs in your local host. You should see the bottom image in your browser if everything was installed correctly!
 
 <a href="http://tinypic.com?ref=2gwysso" target="_blank"><img src="http://i68.tinypic.com/2gwysso.png" border="0" alt="Image and video hosting by TinyPic"></a>
+
+## Rails API  💎
+
+Now that have our virtual enviorment ready, we can create our first ever Rails API. The new rails api command scaffolds everything we need to get up and ready for our project. Let's start our vagrant server and ssh into our project folder. 
+
+1. Run the following:  ``` rails new my-first-api --api -T ```
+
+What's going on here? The ```--api``` command tells rails that we want an API structure application instead of a standard rails structure. The ``` -T ``` command also tells rails that we don't want Minitest as our testing suite. You'll most likely be used to Rspec so we'll talk about that later in the guide. 
+
+2. Enable Cross-Origin Resource Sharing (CORS) in your gem and config directory. Locate your gemfile and uncomment the following
+```ruby
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+ gem 'rack-cors'
+```
+
+Do not forget to ```bundle install``` !
+
+Now in your config/initializers directory, you should now see a ```cors.rb``` file. Add the following to 
+
+```ruby
+# config/initializers/cors.rb
+class Application < Rails::Application
+
+   config.middleware.insert_before 0, "Rack::Cors" do
+     allow do
+       origins '*'
+       resource '*', :headers => :any, :methods => [:get, :post, :patch, :options]
+     end
+   end
+
+ end
+```
+
+Since this tutorial is mainly for testing and toy projects, we are allowing ALL methods from another domain. You should tailor the header and methods to your liking. 
