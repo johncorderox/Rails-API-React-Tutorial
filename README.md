@@ -91,4 +91,19 @@ end
 vagrant halt && vagrant up --provision
 ```
 14. Last step. whew...! Once your vagrant server is on (vagrant up and vagrant ssh!), check that Ruby and Rails was installed!
-``` ruby -v ```
+``` 
+ruby -v 
+```
+## Downloading create-react-app
+
+First we need Node Packet Manager if you dont already. You can download it [here.](https://www.npmjs.com/get-npm) Run the installer and save settings so npm is saved globally. 
+
+Let's begin!
+
+1. run ``` npm install -g create-react-app``` and let the files download to your drive.
+
+  1a. If you are running problems with the ```ERR!``` message, try using ```sudo``` to run privileges as administrator. 
+  
+2. Let's create a test app to see if everything is running smoothly. type ``` create-react-app my-cool-app``` in the command line and see if everything installs. ``` my-cool-app``` will be the name of your react project.
+
+3. Run ``` npm start ``` and type Y in case there are some conflicting port configs in your local host. 
