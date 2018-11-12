@@ -162,3 +162,17 @@ mkdir mkdir app/controllers/api && mkdir app/controllers/api/v1
 If everything looks right you should see your directory identical as below. <br><br>
 <a href="http://tinypic.com?ref=3589c11" target="_blank"><img src="http://i67.tinypic.com/3589c11.png" height="280" width="280" border="0" alt="Image and video hosting by TinyPic"></a>
     
+ Now that our versioning is complete, let's test out a model and controller to work with our new url of ```localhost:3000/api/v1```. Let's scaffold a test model/controller and call it ```movies```
+ 
+ ```ruby
+ rails g scaffold Movies name:string rating:integer 
+ 
+ rails db:migrate
+ ```
+ 
+ The Rails engine creates your controller in the default ```/controllers``` directory but we need to move our new controller into the ```api/v1``` directory. You can either move it manually or the following:
+ 
+ ```shell
+ mv app/controllers/movies_controller.rb app/controllers/api/v1
+ ``` 
+ 
