@@ -1,7 +1,11 @@
 # Rails-API-React-Tutorial 💻 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 Hey! This is a super-easy to follow Rails/React API tutorial that is fully in depth from start to finish. This guide shows you how to install Ruby
-and Rails 5 in a Virtual Box, React JS via create-react-app and connecting the frontend and backend.
+and Rails 5 in a Virtual Box, React JS via create-react-app and connecting the frontend and backend.<br>
+
+<p align="center">
+  <img width="460" height="320" src="https://media.giphy.com/media/oZKuC9DJUK2yc/giphy.gif">
+</p>
 
 ## Table of Contents 
 * Downloading Virtual Box
@@ -212,3 +216,35 @@ Rails.application.routes.draw do
 end
 ```
 which allows us to call the json data from ```ruby localhost:3000/api/v1/movies```
+
+
+6. Let's seed our sqlite database with some classic movies so we can practice getting data with GET requests to the API.
+
+Copy and paste the following data to your ```ruby config/seeds.rb``` file.
+
+```ruby
+Movie.create(name: "The Nightmare Before Christmas", rating: 5)
+Movie.create(name: "Titanic", rating: 5)
+Movie.create(name: "Venom", rating: 4)
+Movie.create(name: "A Quiet Place", rating: 5)
+Movie.create(name: "Nobody's Fool", rating: 2)
+Movie.create(name: "Suspiria", rating: 4)
+Movie.create(name: "Hereditary", rating: 4)
+Movie.create(name: "Office Space", rating: 5)
+Movie.create(name: "Elf", rating: 4)
+Movie.create(name: "Dawn of the Planet of the Apes", rating: 3)
+Movie.create(name: "Secret life of Pets", rating: 4)
+Movie.create(name: "Overlord", rating: 3)
+Movie.create(name: "Wonder Woman", rating: 5)
+Movie.create(name: "Bohemian Rhapsody", rating: 4)
+Movie.create(name: "Ocean's 8", rating: 5)
+```
+
+Seed the DB using ```ruby rails db:seed && rails db:migrate ```
+
+7. Test the API using a GET request.
+
+Start your Rails server ```rails s``` and navigate to ```localhost:3000/api/v1/movies``` and if it is successful you should see the following JSON output: <br><br>
+
+(Optional) I'm using a pretty JSON viewer for chrome which you can download [here.](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
+<a href="http://tinypic.com?ref=2m60ahx" target="_blank"><img src="http://i63.tinypic.com/2m60ahx.png" width="450" height="450" border="0" alt="Image and video hosting by TinyPic"></a>
