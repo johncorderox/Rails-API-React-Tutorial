@@ -162,7 +162,9 @@ mkdir mkdir app/controllers/api && mkdir app/controllers/api/v1
 If everything looks right you should see your directory identical as below. <br><br>
 <a href="http://tinypic.com?ref=3589c11" target="_blank"><img src="http://i67.tinypic.com/3589c11.png" height="280" width="280" border="0" alt="Image and video hosting by TinyPic"></a>
     
- Now that our versioning is complete, let's test out a model and controller to work with our new url of ```localhost:3000/api/v1```. Let's scaffold a test model/controller and call it ```movies```
+ Now that our versioning is complete, let's test out a model and controller to work with our new url of ```localhost:3000/api/v1```. 
+ 
+ 2. Let's scaffold a test model/controller and call it ```movies```
  
  ```ruby
  rails g scaffold Movies name:string rating:integer 
@@ -170,9 +172,43 @@ If everything looks right you should see your directory identical as below. <br>
  rails db:migrate
  ```
  
- The Rails engine creates your controller in the default ```/controllers``` directory but we need to move our new controller into the ```api/v1``` directory. You can either move it manually or the following:
+ The Rails engine creates your controller in the default ```/controllers``` directory but we need to move our new controller into the ```api/v1``` directory.
+ 
+ 3. You can either move it manually or the following:
  
  ```shell
  mv app/controllers/movies_controller.rb app/controllers/api/v1
  ``` 
+ 4. Update the Movies Controller
  
+ Our newly generated controller does not properly inherit from the namespace api/v1 (We will update the routes later in the tutorial) so let's change our controller class from
+ 
+ ```ruby
+ class MoviesController < ApplicationController
+ ```
+ TO
+ 
+  ```ruby
+ class Api::V1::MoviesController < ApplicationController
+ ```
+ 
+5. Update the Routes 
+Locate to your config folder and open your ```routes.rb``` file.
+
+```ruby
+Rails.application.routes.draw do
+  resources :movies
+end
+```
+
+If we go to ```localhost:3000/movies``` we will not call the controller. We must update our Routes to:
+```ruby
+Rails.application.routes.draw do
+ namespace :api do
+  namespace :v1 do
+   resources :movies
+  end
+ end
+end
+```
+which allows us to call the json data from ```ruby localhost:3000/api/v1/movies```
