@@ -250,3 +250,66 @@ Start your Rails server ```rails s``` and navigate to ```localhost:3000/api/v1/m
 <a href="http://tinypic.com?ref=2m60ahx" target="_blank"><img src="http://i63.tinypic.com/2m60ahx.png" width="450" height="450" border="0" alt="Image and video hosting by TinyPic"></a>
 
 Congrats! You have successfully created a Rails API and completed your first GET request! 
+
+## Downloading React into our Project
+
+React is a component based front end framework that makes it easy to make frontend calls to our Rails API. Let's make this organized as possible and add our react directory inside our rails app.
+
+1. Open your terminal and create a new project inside your API.
+```
+create-react-app client 
+``` 
+<br>
+<a href="http://tinypic.com?ref=1zya22t" target="_blank"><img src="http://i64.tinypic.com/358xiu0.png" border="0" height="300" width="280" alt="Image and video hosting by TinyPic"></a>
+<br>
+
+2. Download Boostrap into the react directory:
+
+```
+npm install --save reactstrap bootstrap@4
+```
+
+Then open your ```index.js``` file inside the ```/src``` directory and add the following import line:
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+// Import goes below for Bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
+```
+
+3. We'll make a default Component directory inside the ```/src``` folder and create our first component.
+
+ ```
+ cd client/src && mkdir components && cd components && touch Button.js
+ ```
+ 4. Open your ```Button.js``` file and lets create a sample button to active our call function to the API.
+
+```javascript
+import React, { Component } from 'react';
+
+class Button extends Component {
+  render() {
+    return (
+      <div>
+      <div class="card container mt-3">
+          <div class="card-body">
+            <div class="row">
+            <center>
+            <button class="btn btn-primary">Test Call!</button>
+            </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Button;
+
+ ```
+ 
+5. Start your server `npm start` and check if your bootstrap import works as well as the test button!
