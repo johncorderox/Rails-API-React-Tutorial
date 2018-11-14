@@ -312,4 +312,75 @@ export default Button;
 
  ```
  
-5. Start your server `npm start` and check if your bootstrap import works as well as the test button!
+5. Start your server `npm start` and check if your bootstrap import works as well as the test button! If all is displaying then we are almost done. We are sooooo close!
+
+We want our button to actually call the API now so lets create the function with the appropriate call. We want to add an onclick event to the button html like so:
+
+```javascript
+<button class="btn btn-primary" onClick={this.callApi}>Test Call!</button>
+```
+
+and our custom function PLUS the initial state set to null
+
+```javascript
+
+  state = {
+
+    results: []
+  }
+  
+  callApi = async() => {
+
+     const api_call = await fetch('http://localhost:3000/api/v1/movies');
+
+     const data = await api_call.json();
+
+     this.setState({
+
+        results: data
+     });
+
+  }
+
+```
+
+After copying and pasting both snippets inside the `Button.js` file, we fetch from the url `http://localhost:3000/api/v1/movies` in a json format and once we return a true response we will set the response to the data variable and console log the results into the browser.
+
+This should be the complete Button.js file below! 
+```javascript
+
+import React, { Component } from 'react';
+
+class Button extends Component {
+
+  callApi = async() => {
+
+     const api_call = await fetch('http://localhost:3000/api/v1/movies');
+
+     const data = await api_call.json();
+      
+     console.log(data);
+  }
+
+  
+  render() {
+    return (
+      <div>
+      <div class="card container mt-3">
+          <div class="card-body">
+            <div class="row">
+            <center>
+            <button class="btn btn-primary" onClick={this.callApi}>Test Call!</button>
+            </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Button;
+
+
+```
