@@ -347,8 +347,8 @@ and our custom function PLUS the initial state set to null
 After copying and pasting both snippets inside the `Button.js` file, we fetch from the url `http://localhost:3000/api/v1/movies` in a json format and once we return a true response we will set the response to the data variable and console log the results into the browser.
 
 This should be the complete Button.js file below! 
-```javascript
 
+```javascript
 import React, { Component } from 'react';
 
 class Button extends Component {
@@ -358,19 +358,19 @@ class Button extends Component {
      const api_call = await fetch('http://localhost:3000/api/v1/movies');
 
      const data = await api_call.json();
-      
+
      console.log(data);
   }
 
-  
+
   render() {
     return (
       <div>
-      <div class="card container mt-3">
-          <div class="card-body">
-            <div class="row">
+      <div className="card container mt-3">
+          <div className="card-body">
+            <div className="row">
             <center>
-            <button class="btn btn-primary" onClick={this.callApi}>Test Call!</button>
+            <button className="btn btn-primary" onClick={this.callApi}>Test Call!</button>
             </center>
             </div>
           </div>
@@ -382,5 +382,11 @@ class Button extends Component {
 
 export default Button;
 
-
 ```
+
+
+
+
+  "proxy": "http://127.0.0.1:3000",
+  
+  
