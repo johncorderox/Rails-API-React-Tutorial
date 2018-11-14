@@ -353,17 +353,27 @@ import React, { Component } from 'react';
 
 class Button extends Component {
 
+  state = {
+
+  results: []
+}
+
+
   callApi = async() => {
 
      const api_call = await fetch('http://localhost:3000/api/v1/movies');
 
      const data = await api_call.json();
 
-     console.log(data);
+     this.setState({
+
+         results: data
+      });
   }
 
 
   render() {
+
     return (
       <div>
       <div className="card container mt-3">
@@ -372,6 +382,7 @@ class Button extends Component {
             <center>
             <button className="btn btn-primary" onClick={this.callApi}>Test Call!</button>
             </center>
+            {this.state.results.map((obj) => <li>{obj.name}</li>)}
             </div>
           </div>
         </div>
@@ -382,11 +393,16 @@ class Button extends Component {
 
 export default Button;
 
+
 ```
 
 
 
 
   "proxy": "http://127.0.0.1:3000",
+  
+  
+  
+  IN PROGRESS
   
   
