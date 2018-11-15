@@ -285,7 +285,7 @@ import 'bootstrap/dist/css/bootstrap.css';
  ```
  cd client/src && mkdir components && cd components && touch Button.js
  ```
- 4. Open your ```Button.js``` file and lets create a sample button to active our call function to the API.
+ 4. Open your ```Button.js``` file and lets create a sample button to activate our call function to the API.
 
 ```javascript
 import React, { Component } from 'react';
