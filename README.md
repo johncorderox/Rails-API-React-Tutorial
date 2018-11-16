@@ -215,12 +215,12 @@ Rails.application.routes.draw do
  end
 end
 ```
-which allows us to call the json data from ```ruby localhost:3000/api/v1/movies```
+which allows us to call the json data from ``` localhost:3000/api/v1/movies```
 
 
 6. Let's seed our sqlite database with some classic movies so we can practice getting data with GET requests to the API.
 
-Copy and paste the following data to your ```ruby config/seeds.rb``` file.
+Copy and paste the following data to your ```config/seeds.rb``` file.
 
 ```ruby
 Movie.create(name: "The Nightmare Before Christmas", rating: 5)
@@ -240,7 +240,7 @@ Movie.create(name: "Bohemian Rhapsody", rating: 4)
 Movie.create(name: "Ocean's 8", rating: 5)
 ```
 
-Seed the DB using ```ruby rails db:seed && rails db:migrate ```
+Seed the DB using ``` rails db:seed && rails db:migrate ```
 
 7. Test the API using a GET request.
 
