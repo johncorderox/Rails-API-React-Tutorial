@@ -77,6 +77,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     puma (3.12.0)
     rack (2.0.6)
+    rack-cors (1.0.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.1)
@@ -137,6 +138,7 @@ DEPENDENCIES
   byebug
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.1)
   spring
   spring-watcher-listen (~> 2.0.0)
