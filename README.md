@@ -427,7 +427,3 @@ This should be everything we need to setup the API. Simply click our test api ca
 <a href="http://tinypic.com?ref=ere5n5" target="_blank"><img src="http://i68.tinypic.com/ere5n5.png" height="300" width="310" border="0" alt="Image and video hosting by TinyPic"></a>
   
 ### Congratulations! Our Rails API and React Client is done! 
-
-<p align="center">
-  <img width="460" height="320" src="https://gph.is/1OkYkfJ">
-</p>
