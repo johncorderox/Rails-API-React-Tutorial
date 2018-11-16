@@ -280,12 +280,38 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 ```
 
-3. We'll make a default Component directory inside the ```/src``` folder and create our first component.
+
+3. Let's proxy our client so we know where to get the requests from!
+
+Open ```package.json``` from our react folder and add the following json code to your package.
+
+```javascript
+  "proxy": "http://127.0.0.1:3000",
+```
+
+Heres mine as an example!
+```javascript
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://127.0.0.1:3000",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1",
+    "reactstrap": "^6.5.0"
+  },
+
+```
+
+4. We'll make a default Component directory inside the ```/src``` folder and create our first component.
 
  ```
  cd client/src && mkdir components && cd components && touch Button.js
  ```
- 4. Open your ```Button.js``` file and lets create a sample button to activate our call function to the API.
+ 5. Open your ```Button.js``` file and lets create a sample button to activate our call function to the API.
 
 ```javascript
 import React, { Component } from 'react';
@@ -312,7 +338,7 @@ export default Button;
 
  ```
  
-5. Start your server `npm start` and check if your bootstrap import works as well as the test button! If all is displaying then we are almost done. We are sooooo close!
+6. Start your server `npm start` and check if your bootstrap import works as well as the test button! If all is displaying then we are almost done. We are sooooo close!
 
 We want our button to actually call the API now so lets create the function with the appropriate call. We want to add an onclick event to the button html like so:
 
@@ -380,9 +406,9 @@ class Button extends Component {
           <div className="card-body">
             <div className="row">
             <center>
-            <button className="btn btn-primary" onClick={this.callApi}>Test Call!</button>
-            </center>
-            {this.state.results.map((obj) => <li>{obj.name}</li>)}
+            <button className="btn btn-primary" onClick={this.callApi}>Test Call!</button><br />
+            </center><br /><br /><br /><br /><br />
+            <p className="m-5">{this.state.results.map((obj) => <li>{obj.name}</li>)}</p>
             </div>
           </div>
         </div>
@@ -396,13 +422,12 @@ export default Button;
 
 ```
 
+This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
 
+<a href="http://tinypic.com?ref=ere5n5" target="_blank"><img src="http://i68.tinypic.com/ere5n5.png" height="300" width="310" border="0" alt="Image and video hosting by TinyPic"></a>
+  
+### Congratulations! Our Rails API and React Client is done! 
 
-
-  "proxy": "http://127.0.0.1:3000",
-  
-  
-  
-  IN PROGRESS
-  
-  
+<p align="center">
+  <img width="460" height="320" src="https://gph.is/1OkYkfJ">
+</p>
