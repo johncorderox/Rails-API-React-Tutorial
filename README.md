@@ -248,7 +248,7 @@ which allows us to call the json data from `localhost:3000/api/v1/movies`
 
 6.  Let's seed our sqlite database with some classic movies so we can practice getting data with GET requests to the API.
 
-Copy and paste the following data to your `config/seeds.rb` file.
+Copy and paste the following data to your `db/seeds.rb` file.
 
 ```ruby
 Movie.create(name: "The Nightmare Before Christmas", rating: 5)
