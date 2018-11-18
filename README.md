@@ -10,10 +10,10 @@ and Rails 5 in a Virtual Box, React JS via create-react-app and connecting the f
 ## Table of Contents
 
 - [Downloading Virtual Box](#downloading-virtual-box)
-- Downloading create-react-app
-- Creating a Rails API
-- Create a react frontend
-- Connect the API with React
+- [Downloading create-react-app](#downloading-create-react-app)
+- [Creating a Rails API](#creating-a-rails-api)
+- [Create a react frontend](#create-a-react-frontend)
+- [Connect the API with React](#connect-the-api-with-react)
 
 ## Downloading Virtual Box
 
