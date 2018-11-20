@@ -452,6 +452,4 @@ export default Button;
 
 This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
 
-<a href="http://tinypic.com?ref=ere5n5" target="_blank"><img src="http://i68.tinypic.com/ere5n5.png" height="300" width="310" border="0" alt="Image and video hosting by TinyPic"></a>
-
 ### Congratulations! Our Rails API and React Client is done!
