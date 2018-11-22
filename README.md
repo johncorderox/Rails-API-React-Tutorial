@@ -452,10 +452,10 @@ export default Button;
 
 This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
 
-### Congratulations! Our Rails API and React Client is done!
+Congratulations! Our Rails API and React Client is done!
 
 
-# Rails Serializers
+## Rails Serializers
 
 What are Serializers? Well Rails API's returns JSON data in full, so serializers allows us to cherry pick the exact data we want in a much organized fashion. Instead of getting every column from the returned data, we can grab which ever we allow to pass through.
 
