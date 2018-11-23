@@ -450,6 +450,27 @@ class Button extends Component {
 export default Button;
 ```
 
+7. Finally, let's open our ```App.js``` file in the /src directory to add our new Button Component to the App itself. Check below to see the example. Don't forget that we need to enclose the ```<Button />``` in two ```<div></div>``` tags!
+```javascript
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+import Button from './components/Button';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+      <Button />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
 This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
 
 Congratulations! Our Rails API and React Client is done!
