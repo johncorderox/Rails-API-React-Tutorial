@@ -473,7 +473,7 @@ export default App;
 
 This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
 
-Congratulations! Our Rails API and React Client is done!
+Congratulations! Our Rails API and React Client is done! If you enjoyed this API tutorial please give it a star and share it with your friends!
 
 
 ## Rails Serializers
