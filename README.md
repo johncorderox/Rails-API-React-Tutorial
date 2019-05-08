@@ -368,10 +368,30 @@ class Button extends Component {
 
 export default Button;
 ```
+6. Let's open our ```App.js``` file in the /src directory to add our new Button Component to the App itself. Check below to see the example. Don't forget that we need to enclose the ```<Button />``` in two ```<div></div>``` tags!
+```javascript
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-6.  Start your server `npm start` and check if your bootstrap import works as well as the test button! If all is displaying then we are almost done. We are sooooo close!
+import Button from './components/Button';
 
-We want our button to actually call the API now so lets create the function with the appropriate call. We want to add an onclick event to the button html like so:
+class App extends Component {
+  render() {
+    return (
+      <div>
+      <Button />
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+Start your server `npm start` and check if your bootstrap import works as well as the test button! If all is displaying then we are almost done. We are sooooo close!
+
+7. We want our button to actually call the API now so lets create the function with the appropriate call. We want to add an onclick event to the button html like so:
 
 ```javascript
 <button class="btn btn-primary" onClick={this.callApi}>
@@ -449,28 +469,6 @@ class Button extends Component {
 
 export default Button;
 ```
-
-7. Finally, let's open our ```App.js``` file in the /src directory to add our new Button Component to the App itself. Check below to see the example. Don't forget that we need to enclose the ```<Button />``` in two ```<div></div>``` tags!
-```javascript
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-import Button from './components/Button';
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-      <Button />
-      </div>
-    );
-  }
-}
-
-export default App;
-```
-
 This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
 
 Congratulations! Our Rails API and React Client is done! If you enjoyed this API tutorial please give it a star and share it with your friends!
