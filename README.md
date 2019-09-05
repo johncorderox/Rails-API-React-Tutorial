@@ -13,7 +13,7 @@ and Rails 5 in a Virtual Box, React JS via create-react-app and connecting the f
 - [Downloading create-react-app](#downloading-create-react-app)
 - [Creating a Rails API](#rails-api)
 - [Create a react frontend](#create-a-react-frontend)
-- [Connect the API with React](#downloading-react-into-our-project)
+- [Connect the API with React](#downloading-react-into-our-project)]
 
 ## Downloading Virtual Box
 
@@ -24,106 +24,7 @@ and Rails 5 in a Virtual Box, React JS via create-react-app and connecting the f
 1.  Download VirtualBox 5.2.22 for Mac OSX [here,](https://download.virtualbox.org/virtualbox/5.2.22/VirtualBox-5.2.22-126460-OSX.dmg) or Windows [here](https://download.virtualbox.org/virtualbox/5.2.22/VirtualBox-5.2.22-126460-Win.exe)
 2.  Run the installer.
 3.  Download Vagrant for Mac OSX [here,](https://releases.hashicorp.com/vagrant/2.2.0/vagrant_2.2.0_x86_64.dmg) or Windows [here](https://releases.hashicorp.com/vagrant/2.2.0/vagrant_2.2.0_x86_64.msi)
-4.  Let's create our first enviorment. You can run the script below to keep your rails projects on your Desktop.
-
-```
-cd /Desktop && mkdir rails && cd rails && vagrant init
-```
-
-5.  Download the OS to VirtualBox
-
-```
-vagrant box add ubuntu/trusty64
-```
-
-6.  Double check and make sure our new box is there
-
-```
-vagrant box list
-```
-
-7.  Add this script to the Vagrant File
-
-```
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/trusty64"
-end
-```
-
-8.  Start the vagrant server
-
-```
-vagrant up && vagrant ssh
-```
-
-9.  Direct yourself to the vagrant directory
-
-```
-cd /vagrant
-```
-
-10. Add our Bootstrap File
-
-```
-mkdir new_project && cd new_project && touch bootstrap.sh
-```
-
-11. Copy this script to configure our virtual enviorment
-
-```
-#!/usr/bin/env bash
-# upgrade and update the system
-echo upgrading and updating the system
-sudo apt-get update
-sudo apt-get -y upgrade
-# install node.js for js runtime when using Rails
-echo installing nodejs for ExecJS runtime and git
-sudo apt-get install -y nodejs
-sudo apt-get install -y git
-# install RVM
-echo installing RVM
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash -s stable
-source /home/vagrant/.rvm/scripts/rvm
-rvm requirements
-# install Ruby and make 2.3.1 the default
-echo installing ruby
-rvm install 2.3.1
-rvm use 2.3.1 --default
-# install Bundler and Rails
-echo installing bundler and rails
-gem install bundler --no-ri --no-rdoc
-gem install rails -v 4.2.7 --no-ri --no-rdoc
-# install postgres and its dependencies
-echo installing psql and its dependencies
-sudo apt-get install -y postgresql postgresql-contrib libpq-dev
-```
-
-12. Re-edit the vagrant file for our newest editions + new bootstrap file
-
-```
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/trusty64"
-  config.vm.network "forwarded_port", guest: 3000, host: 3000, host_ip: "127.0.0.1"
-  config.vm.provision :shell, path: "bootstrap.sh", privileged: false
-  config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
-    vb.customize ["modifyvm", :id, "--cpus", "2"]
-  end
-end
-```
-
-13. Open a new tab in your terminal and lets test the vagrant configs
-
-```
-vagrant halt && vagrant up --provision
-```
-
-14. Last step. whew...! Once your vagrant server is on (vagrant up and vagrant ssh!), check that Ruby and Rails was installed!
-
-```
-ruby -v
-```
+4. I currently use this ALL-IN-ONE rails env that I absolutely adore. Follow instructions <a href="https://github.com/rails/rails-dev-box">here</a>.
 
 ## Downloading create-react-app
 
