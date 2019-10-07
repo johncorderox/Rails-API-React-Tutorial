@@ -40,7 +40,6 @@ Let's begin!
 
 3.  Run `npm start` and type Y in case there are some conflicting port configs in your local host. You should see the bottom image in your browser if everything was installed correctly!
 
-<a href="http://tinypic.com?ref=2gwysso" target="_blank"><img src="http://i68.tinypic.com/2gwysso.png" border="0" alt="Image and video hosting by TinyPic"></a>
 
 ## Rails API 💎
 
@@ -87,8 +86,6 @@ Versioning is the process of seperating and creating new features/data/endpoints
 mkdir mkdir app/controllers/api && mkdir app/controllers/api/v1
 ```
 
-If everything looks right you should see your directory identical as below. <br><br>
-<a href="http://tinypic.com?ref=3589c11" target="_blank"><img src="http://i67.tinypic.com/3589c11.png" height="280" width="280" border="0" alt="Image and video hosting by TinyPic"></a>
 
  Now that our versioning is complete, let's test out a model and controller to work with our new url of `localhost:3000/api/v1`.
 
@@ -175,8 +172,7 @@ Seed the DB using `rails db:seed && rails db:migrate`
 
 Start your Rails server `rails s` and navigate to `localhost:3000/api/v1/movies` and if it is successful you should see the following JSON output: <br><br>
 
-(Optional) I'm using a pretty JSON viewer for chrome which you can download [here.](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc)
-<a href="http://tinypic.com?ref=2m60ahx" target="_blank"><img src="http://i63.tinypic.com/2m60ahx.png" width="450" height="450" border="0" alt="Image and video hosting by TinyPic"></a>
+(Optional) I'm using a pretty JSON viewer for chrome which you can download [here.]
 
 Congrats! You have successfully created a Rails API and completed your first GET request!
 
@@ -189,9 +185,6 @@ React is a component based front end framework that makes it easy to make fronte
 ```
 create-react-app client
 ```
-
-<br>
-<a href="http://tinypic.com?ref=1zya22t" target="_blank"><img src="http://i64.tinypic.com/358xiu0.png" border="0" height="300" width="280" alt="Image and video hosting by TinyPic"></a>
 <br>
 
 2.  Download Boostrap into the react directory:
