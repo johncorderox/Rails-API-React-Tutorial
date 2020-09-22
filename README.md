@@ -9,9 +9,12 @@ Hey! This is a super-easy to follow Rails/React API tutorial that is fully in de
 
 ## System Requirements 
 ```Ruby
-ruby '2.3.1'
+ruby '2.7.0'
 
 gem 'rails', '~> 5.2.1'
+
+BUNDLED WITH
+   2.1.2
 ```
 
 ## Table of Contents
