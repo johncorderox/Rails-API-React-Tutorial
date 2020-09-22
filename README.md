@@ -1,4 +1,4 @@
-# Rails-API-React-Tutorial 💻 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+# Rails-API-React-Tutorial 💻 ![GitHub last commit](https://img.shields.io/github/last-commit/johncorderox/Rails-API-React-Tutorial?style=flat-square)
 
 Hey! This is a super-easy to follow Rails/React API tutorial that is fully in depth from start to finish. This guide shows you how to install a Ruby on Rails 5 API with React JS via create-react-app and connecting the frontend and backend.
 <br>
