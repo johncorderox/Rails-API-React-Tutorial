@@ -1,30 +1,16 @@
 # Rails-API-React-Tutorial 💻 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
-Hey! This is a super-easy to follow Rails/React API tutorial that is fully in depth from start to finish. This guide shows you how to install Ruby
-and Rails 5 in a Virtual Box, React JS via create-react-app and connecting the frontend and backend.<br>
+Hey! This is a super-easy to follow Rails/React API tutorial that is fully in depth from start to finish. This guide shows you how to install a Ruby on Rails 5 API with React JS via create-react-app and connecting the frontend and backend.<br>
 
 <p align="center">
   <img width="460" height="320" src="https://media.giphy.com/media/oZKuC9DJUK2yc/giphy.gif">
 </p>
 
 ## Table of Contents
-
-- [Downloading Virtual Box](#downloading-virtual-box)
 - [Downloading create-react-app](#downloading-create-react-app)
 - [Creating a Rails API](#rails-api)
 - [Create a react frontend](#create-a-react-frontend)
 - [Connect the API with React](#downloading-react-into-our-project)
-
-## Downloading Virtual Box
-
-- Why Virtual Box? What is it?
-  We'll be using Ubuntu to work with our rails applications so it'll be more organized for us to be working in a virtual enviorment! You can always destroy
-  the enviorment and reconfigure whenever you want.
-
-1.  Download VirtualBox 5.2.22 for Mac OSX [here,](https://download.virtualbox.org/virtualbox/5.2.22/VirtualBox-5.2.22-126460-OSX.dmg) or Windows [here](https://download.virtualbox.org/virtualbox/5.2.22/VirtualBox-5.2.22-126460-Win.exe)
-2.  Run the installer.
-3.  Download Vagrant for Mac OSX [here,](https://releases.hashicorp.com/vagrant/2.2.0/vagrant_2.2.0_x86_64.dmg) or Windows [here](https://releases.hashicorp.com/vagrant/2.2.0/vagrant_2.2.0_x86_64.msi)
-4. I currently use this ALL-IN-ONE rails env that I absolutely adore. Follow instructions <a href="https://github.com/rails/rails-dev-box">here</a>.
 
 ## Downloading create-react-app
 
