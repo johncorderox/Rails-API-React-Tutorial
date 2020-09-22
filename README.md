@@ -12,6 +12,7 @@ Hey! This is a super-easy to follow Rails/React API tutorial that is fully in de
 - [Creating a Rails API](#rails-api)
 - [Create a react frontend](#create-a-react-frontend)
 - [Connect the API with React](#downloading-react-into-our-project)
+- [Contributing](#contributing)
 
 ## Downloading create-react-app
 
@@ -406,4 +407,17 @@ id: 3
 ```
 
 You can add any attribute to your liking to the serializer file for your next big project. But that's the end of the serializer section! 
+
+## Contributing
+- Fork it
+- Create your feature branch (git checkout -b my-new-feature)
+- Commit your changes (git commit -am 'Add some feature')
+- Push to the branch (git push origin my-new-feature)
+- Create new Pull Request
+
+I love collaboration! Please feel free to contribute or add your insights ✨ 
+
+## About the Author
+
+I am a Software Engineer based in Los Angeles who can't stop building in rails 💎. You can find my site <a href="https://johncorderox.com">here.</a> 
 
