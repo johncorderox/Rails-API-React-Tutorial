@@ -7,6 +7,13 @@ Hey! This is a super-easy to follow Rails/React API tutorial that is fully in de
   <img width="460" height="320" src="https://media.giphy.com/media/TNf5oSRelTeI8/giphy.gif">
 </p>
 
+## System Requirements 
+```Ruby
+ruby '2.3.1'
+
+gem 'rails', '~> 5.2.1'
+```
+
 ## Table of Contents
 - [Downloading create-react-app](#downloading-create-react-app)
 - [Creating a Rails API](#rails-api)
