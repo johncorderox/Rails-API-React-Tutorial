@@ -81,7 +81,7 @@ Versioning is the process of seperating and creating new features/data/endpoints
 1.  Run the following in your terminal
 
 ```shell
-mkdir mkdir app/controllers/api && mkdir app/controllers/api/v1
+mkdir app/controllers/api && mkdir app/controllers/api/v1
 ```
 
 
