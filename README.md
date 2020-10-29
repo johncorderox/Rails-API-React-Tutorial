@@ -394,7 +394,7 @@ You can see that a new directory was made in the ```app/``` directory and we now
 Let's open that file and see what we have: 
 ```ruby
 class MovieSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name 
 end
 
 ```
@@ -403,16 +403,19 @@ We have our Movie Class inheriting from the serializer class on the first line, 
 
 1a. Turn on your rails server and go to the url ``` localhost:3000/api/v1/movies ```
 
-You should see that only the ```id``` attribute is being returned from the database. 
+You should see that only the ```id``` and ```name``` attribute is being returned from the database. 
 ```json
 {
-id: 1
+  id: 1,
+  name: "A Quiet Place"
 },
 {
-id: 2
+  id: 2
+  name: "The Avengers
 },
 {
-id: 3
+  id: 3
+  name: "Midsommar"
 }
 ```
 
