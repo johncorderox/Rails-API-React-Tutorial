@@ -405,18 +405,20 @@ We have our Movie Class inheriting from the serializer class on the first line, 
 
 You should see that only the ```id``` and ```name``` attribute is being returned from the database. 
 ```json
-{
-  id: 1,
-  name: "A Quiet Place"
-},
-{
-  id: 2
-  name: "The Avengers
-},
-{
-  id: 3
-  name: "Midsommar"
-}
+{ movies: 
+          {
+            id: 1,
+            name: "A Quiet Place"
+          },
+          {
+            id: 2
+            name: "The Avengers"
+          },
+          {
+            id: 3
+            name: "Midsommar"
+          }
+ }
 ```
 
 You can add any attribute to your liking to the serializer file for your next big project. But that's the end of the serializer section! 
