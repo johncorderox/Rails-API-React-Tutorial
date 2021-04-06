@@ -5,6 +5,8 @@ Hey! This is a super-easy to follow Rails/React API tutorial that is fully in de
 Note: <b>This API has been getting some attention and I'm so thankful. I will be making a Rails 6 API + React JS soon! ❤️</b>
 <br>
 
+Rails 6 Tutorial being made start 4-6-2021
+
 <p align="center">
   <img width="460" height="320" src="https://media.giphy.com/media/TNf5oSRelTeI8/giphy.gif">
 </p>
