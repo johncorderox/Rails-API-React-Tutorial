@@ -5,7 +5,7 @@ Hey! This is a super-easy to follow Rails/React API tutorial that is fully in de
 <b>Stack:</b> Rails 6 API + React JS located in ```app/javascript``` + Webpacker
 
 <p align="center">
-  <img width="460" height="320" src="https://media.giphy.com/media/3o6ZsX2OZJ8G3Tec6Y/giphy.gif">
+  <img width="460" height="320" src="https://media.giphy.com/media/14wHxi7D45grRK/giphy.gif">
 </p>
 
 ## System Requirements 
