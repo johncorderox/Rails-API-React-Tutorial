@@ -17,61 +17,18 @@ gem "rails", "~> 6.1.3"
 ```
 
 ## Table of Contents
-- [Downloading create-react-app](#downloading-create-react-app)
 - [Creating a Rails API](#rails-api)
 - [Create a react frontend](#create-a-react-frontend)
 - [Connect the API with React](#downloading-react-into-our-project)
 - [Contributing](#contributing)
 
-## Downloading create-react-app
-
-First we need Node Packet Manager if you dont already. You can download it [here.](https://www.npmjs.com/get-npm) Run the installer and save settings so npm is saved globally.
-
-Let's begin!
-
-1.  run `npm install -g create-react-app` and let the files download to your drive.
-
-1a. If you are running problems with the `ERR!` message, try using `sudo` to run privileges as administrator.
-
-2.  Let's create a test app to see if everything is running smoothly. type `create-react-app my-cool-app` in the command line and see if everything installs. `my-cool-app` will be the name of your react project.
-
-3.  Run `npm start` and type Y in case there are some conflicting port configs in your local host. You should see the bottom image in your browser if everything was installed correctly!
-
-
 ## Rails API 💎
 
 Now that have our virtual enviorment ready, we can create our first ever Rails API. The new rails api command scaffolds everything we need to get up and ready for our project. Let's start our vagrant server and ssh into our project folder.
 
-1.  Run the following: `rails new my-first-api --api -T`
+1.  Run the following: `rails new my_app --api -T --database=postgresql`
 
-What's going on here? The `--api` command tells rails that we want an API structure application instead of a standard rails structure. The `-T` command also tells rails that we don't want Minitest as our testing suite. You'll most likely be used to Rspec so we'll talk about that later in the guide.
-
-2.  Enable Cross-Origin Resource Sharing (CORS) in your gem and config directory. Locate your gemfile and uncomment the following
-
-```ruby
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
- gem 'rack-cors'
-```
-
-Do not forget to `bundle install` !
-
-Now in your config/initializers directory, you should now see a `cors.rb` file. Add the following to
-
-```ruby
-# config/initializers/cors.rb
-class Application < Rails::Application
-
-   config.middleware.insert_before 0, "Rack::Cors" do
-     allow do
-       origins '*'
-       resource '*', :headers => :any, :methods => [:get, :post, :patch, :options]
-     end
-   end
-
- end
-```
-
-Since this tutorial is mainly for testing and toy projects, we are allowing ALL methods from another domain. You should tailor the header and methods to your liking.
+What's going on here? The `--api` command tells rails that we want an API structure application instead of a standard rails structure. The `-T` command also tells rails that we don't want Minitest as our testing suite. You'll most likely be used to Rspec so we'll talk about that later in the guide. The ```--database=postgresql` line is pretty much self explanatory!
 
 ## Rails API Versioning
 
@@ -115,8 +72,15 @@ class MoviesController < ApplicationController
 TO
 
 ```ruby
-class Api::V1::MoviesController < ApplicationController
+module Api
+  module V1
+    class MoviesController < ApplicationController
+    end
+  end
+end
 ```
+
+This makes it so we can INHERIT from the application controller without any additional tinkering.
 
 5.  Update the Routes
     Locate to your config folder and open your `routes.rb` file.
@@ -141,7 +105,7 @@ end
 
 which allows us to call the json data from `localhost:3000/api/v1/movies`
 
-6.  Let's seed our sqlite database with some classic movies so we can practice getting data with GET requests to the API.
+6.  Let's seed our PG database with some classic movies so we can practice getting data with GET requests to the API.
 
 Copy and paste the following data to your `db/seeds.rb` file.
 
@@ -163,11 +127,11 @@ Movie.create(name: "Bohemian Rhapsody", rating: 4)
 Movie.create(name: "Ocean's 8", rating: 5)
 ```
 
-Seed the DB using `rails db:seed && rails db:migrate`
+Seed the DB using `rails db:seed && rails db:migrate`. Don't forget to ```rails db:create``` if it was not yet initialized!
 
 7.  Test the API using a GET request.
 
-Start your Rails server `rails s` and navigate to `localhost:3000/api/v1/movies` and if it is successful you should see the following JSON output: <br><br>
+Start your Rails server `rails s` or ```rails s -b 0.0.0.0 ``` and navigate to `localhost:3000/api/v1/movies` and if it is successful you should see the following JSON output: <br><br>
 
 (Optional) I'm using a pretty JSON viewer for chrome which you can download [here.]
 
