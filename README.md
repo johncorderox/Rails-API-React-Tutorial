@@ -48,9 +48,10 @@ mkdir app/controllers/api && mkdir app/controllers/api/v1
 
 ```ruby
 rails g scaffold Movies name:string rating:integer
-
-rails db:migrate
 ```
+Don't forget to ```rails db:create``` if it was not yet initialized!
+
+Then we can use ``` rails db:migrate``` for our scaffold.
 
 The Rails engine creates your controller in the default `/controllers` directory but we need to move our new controller into the `api/v1` directory.
 
@@ -75,6 +76,7 @@ TO
 module Api
   module V1
     class MoviesController < ApplicationController
+    # The scaffold ruby code is here~
     end
   end
 end
@@ -127,13 +129,13 @@ Movie.create(name: "Bohemian Rhapsody", rating: 4)
 Movie.create(name: "Ocean's 8", rating: 5)
 ```
 
-Seed the DB using `rails db:seed && rails db:migrate`. Don't forget to ```rails db:create``` if it was not yet initialized!
+Seed the DB using `rails db:seed`.
 
 7.  Test the API using a GET request.
 
 Start your Rails server `rails s` or ```rails s -b 0.0.0.0 ``` and navigate to `localhost:3000/api/v1/movies` and if it is successful you should see the following JSON output: <br><br>
-
-(Optional) I'm using a pretty JSON viewer for chrome which you can download [here.]
+<img src="https://i.ibb.co/KXPQ1cd/Screen-Shot-2021-04-06-at-12-58-12-PM.png" />
+(Optional) I'm using a pretty JSON viewer for chrome which you can download.
 
 Congrats! You have successfully created a Rails API and completed your first GET request!
 
