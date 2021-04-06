@@ -1,19 +1,18 @@
 # Rails-API-React-Tutorial 💻 ![GitHub last commit](https://img.shields.io/github/last-commit/johncorderox/Rails-API-React-Tutorial?style=flat-square) ![GitHub contributors](https://img.shields.io/github/contributors/johncorderox/Rails-API-React-Tutorial?color=blue&style=flat-square)
 
-Hey! This is a super-easy to follow Rails/React API tutorial that is fully in depth from start to finish. This guide shows you how to install a Ruby on Rails 5 API with React JS via create-react-app and connecting the frontend and backend. <br>
+Hey! This is a super-easy to follow Rails/React API tutorial that is fully in depth from start to finish. This guide shows you how to install a Ruby on Rails 6 API with React JS via Webpacker and connecting the frontend with the backend. <br>
 
-Note: <b>This API has been getting some attention and I'm so thankful. I will be making a Rails 6 API + React JS soon! ❤️</b>
-<br>
+<b>Stack:</b> Rails 6 API + React JS located in ```app/javascript``` + Webpacker
 
 <p align="center">
-  <img width="460" height="320" src="https://media.giphy.com/media/TNf5oSRelTeI8/giphy.gif">
+  <img width="460" height="320" src="https://media.giphy.com/media/HCK7W8Qb52ifS/giphy.gif">
 </p>
 
 ## System Requirements 
 ```Ruby
-ruby '2.3.1'
+ruby "2.6.3" +
 
-gem 'rails', '~> 5.2.1'
+gem "rails", "~> 6.1.3"
 
 ```
 
