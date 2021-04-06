@@ -134,7 +134,7 @@ Seed the DB using `rails db:seed`.
 7.  Test the API using a GET request.
 
 Start your Rails server `rails s` or ```rails s -b 0.0.0.0 ``` and navigate to `localhost:3000/api/v1/movies` and if it is successful you should see the following JSON output: <br><br>
-<img src="https://i.ibb.co/KXPQ1cd/Screen-Shot-2021-04-06-at-12-58-12-PM.png" />
+<img src="https://i.ibb.co/KXPQ1cd/Screen-Shot-2021-04-06-at-12-58-12-PM.png" /><br>
 (Optional) I'm using a pretty JSON viewer for chrome which you can download.
 
 Congrats! You have successfully created a Rails API and completed your first GET request!
