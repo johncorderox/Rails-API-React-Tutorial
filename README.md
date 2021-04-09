@@ -383,70 +383,13 @@ export default App
 
 
 6. Start the rails server! And Success!! We can now make API calls to our backend!
+<img src="https://i.ibb.co/ys2SQFd/Screen-Shot-2021-04-09-at-3-47-16-PM.png" alt="Screen-Shot-2021-04-09-at-3-47-16-PM" border="0">
 
 
 
-
-
+💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘
 Congratulations! Our Rails API and React Client is done! If you enjoyed this API tutorial please give it a star and share it with your friends!
 
-
-## Rails Serializers
-
-What are Serializers? Well Rails API's returns JSON data in full, so serializers allows us to cherry pick the exact data we want in a much organized fashion. Instead of getting every column from the returned data, we can grab which ever we allow to pass through.
-
-| Normal Model        | Serializer Model    | 
-| ------------- |:-------------:|
-| id, name, rating, director, score, actors_id, created_at, updated_at| id, name, rating|
-
-We are able to tell the Rails API what to fetch rather than the frontend; making it much more simple and faster to scaffold your next project.
-
-1. Installation
-
-Open your ```gemfile``` and add the serializer gem into your project. Don't forget to ```bundle install``` !
-```ruby
-# Serializer
-gem 'active_model_serializers'
-``` 
-
-We want to create a clone of any current model we have so when we make requests in the backend, the request will read the serializer file <strong>first</strong>, then it will find the rails model/controller to finisht the request. We have a model called Movie so we'll duplicate that by running:
-
-```
-rails g serializer movie
-```
-You can see that a new directory was made in the ```app/``` directory and we now have ```app/serializers/movie_serializer``` file in our project. 
-
-Let's open that file and see what we have: 
-```ruby
-class MovieSerializer < ActiveModel::Serializer
-  attributes :id, :name 
-end
-
-```
-
-We have our Movie Class inheriting from the serializer class on the first line, and the returned attribute on the second. So far the default returned attribute is just an ID. Let's test this now!
-
-1a. Turn on your rails server and go to the url ``` localhost:3000/api/v1/movies ```
-
-You should see that only the ```id``` and ```name``` attribute is being returned from the database. 
-```json
-{ movies: 
-          {
-            id: 1,
-            name: "A Quiet Place"
-          },
-          {
-            id: 2
-            name: "The Avengers"
-          },
-          {
-            id: 3
-            name: "Midsommar"
-          }
- }
-```
-
-You can add any attribute to your liking to the serializer file for your next big project. But that's the end of the serializer section! 
 
 ## Contributing
 - Fork it
