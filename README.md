@@ -204,7 +204,68 @@ end
 
 <img src="https://i.ibb.co/DLPVvXr/Screen-Shot-2021-04-09-at-3-11-22-PM.png" alt="Screen-Shot-2021-04-09-at-3-11-22-PM" border="0"></a><br /><br />
 
-React has been linked, successfully. You can take a small break now if you wish. 
+React has been linked, successfully. 
+
+## Restructure our React Project
+
+Personally, I don't like the structure of React in this concept, so let's add something more "neater" so we can find our components easier. 
+
+1. Delete all of the contents inside the javascript directory so we can start fresh. 
+2. Create 2 new folders named ```components``` and `packs` inside the javascript folder.
+3. Inside your `packs` folder, create a file named ```application.js``` and add the following to it:
+```js
+import Rails from "@rails/ujs"
+import Turbolinks from "turbolinks"
+import * as ActiveStorage from "@rails/activestorage"
+
+Rails.start()
+Turbolinks.start()
+ActiveStorage.start()
+```
+
+Let's also create a hello_react.jsx file and add the following:
+```js
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from '../components/App'
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <App />,
+    document.body.appendChild(document.createElement('div')),
+  )
+})
+```
+
+4. Next, let's create a new folder named `components` and create a file named `App.js`
+
+Add the following to `App.js`
+
+```js
+import React, { Component } from 'react'
+
+class App extends Component {
+  render(){
+    return(
+      <div>
+      <h1> Cool API :) </h1>
+      </div>
+
+    )
+  }
+}
+
+export default App
+
+```
+
+5. You should now be able to see the structure better with a `components` folder and add any new component you wish!. Let's run the rails server to see if its calling our new H1 text.
+
+<img src="https://i.ibb.co/jT5Cq5c/Screen-Shot-2021-04-09-at-3-23-48-PM.png" alt="Screen-Shot-2021-04-09-at-3-23-48-PM" border="0">
+
+6. Our new structure is complete! You can stop here and make your own API to your own liking. In the next section, we can create a new component and test the data being called!
+
+## Our first Component
 
 
 
@@ -218,7 +279,8 @@ React has been linked, successfully. You can take a small break now if you wish.
 
 
 
-This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
+
+
 
 Congratulations! Our Rails API and React Client is done! If you enjoyed this API tutorial please give it a star and share it with your friends!
 
