@@ -248,7 +248,7 @@ class App extends Component {
   render(){
     return(
       <div>
-      <h1> Hello From React! </h1>
+      <h1> React says Hello! </h1>
       </div>
 
     )
