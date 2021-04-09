@@ -18,7 +18,7 @@ gem "rails", "~> 6.1.3"
 
 ## Table of Contents
 - [Creating a Rails API](#rails-api)
-- [Webpacker/React Integration](#Webpacker/React Integration)
+- [React Integration](#react-integration)
 - [Contributing](#contributing)
 
 ## Rails API 💎
@@ -138,7 +138,7 @@ Start your Rails server `rails s` or ```rails s -b 0.0.0.0 ``` and navigate to `
 
 Congrats! You have successfully created a Rails API and completed your first GET request!
 
-## Webpacker/React Integration
+## React Integration
 
 React is a component based front end framework that makes it easy to make frontend calls to our Rails API. Let's make this organized as possible and add our react directory inside our rails ```app/javascript``` directory.
 
