@@ -265,17 +265,105 @@ export default App
 
 6. Our new structure is complete! You can stop here and make your own API to your own liking. In the next section, we can create a new component and test the data being called!
 
-## Our first Component
+## Our First Component
+
+React JS is all about components! Assuming we know basic React workflow, lets create a new component under the `component` direct named `MovieInfo.js`
+
+1. We can add the following to `MovieInfo.js` as the basic skeleton.
+
+```js
+# app/js/components/MovieInfo.js
+
+import React from 'react'
+
+export class MovieInfo extends React.Component {
+
+  constructor() {
+     super();
+   }
+
+  render() {
+    let album = this.state.album;
+    return (
+      <div>
+      </div>
+  )
+}
+
+}
+export default MovieInfo;
+```
+
+2. Let us add a state method so we can fill the array with the API call. Add this under the export class line
+
+```js
+  constructor() {
+     super();
+     this.state = {
+       movies: []
+     };
+   }
+```
+
+3. We should ass add the `componentDidMount` function so the data can be created in the virtual DOM on page load.
+
+```js
+  componentDidMount(){
+    fetch("/api/v1/movies")
+    .then(resp => resp.json())
+    .then(m => {
+      this.setState({
+        movies: m
+      })
+    })
+    .catch(error => console.log(error))
+  }
+```
+4. Our final file should look like this.
+
+```js
+import React from 'react'
+
+export class MovieInfo extends React.Component {
+
+  constructor() {
+     super();
+     this.state = {
+       album: []
+     };
+   }
+
+  componentDidMount(){
+    fetch("/api/v1/movies")
+    .then(resp => resp.json())
+    .then(a => {
+      this.setState({
+        album: a
+      })
+    })
+    .catch(error => console.log(error))
+  }
+
+  render() {
+    let album = this.state.album;
+    return (
+      <div>
+      {this.state.api.map(obj =>
+        <p key={obj.id}>{obj.name}</p>
+
+      )}
+     </div>
+  )
+}
+
+}
+export default MovieInfo;
 
 
-
-
-
-
-
-
-
-
+```
+5. Import the file to our `App.js` file.
+```js
+```
 
 
 
