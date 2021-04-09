@@ -155,7 +155,7 @@ And wait for the ```Webpacker now supports react.js 🎉``` message to finally u
 
 <b>Note:</b> Notice the H1 tag on the ```Hello {props.name}!```, this is so we can see it clearly. When intalling, the H1 tag will not be there. It is purely cosmetic for now. 
 
-```
+```js
 # app/javascript/packs/hello_react.jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -180,22 +180,28 @@ document.addEventListener('DOMContentLoaded', () => {
   )
 })
 ```
+
 We can hook this file into any view we want React to send, so lets try this out now and add this to a demo view.
 
 3. Let's create a Home controller + view so can we load React to it. Run the following 
+
 ```
 rails g controller Home index
 ```
+
 and locate your routes in ```config/routes.rb```
 
 Open the route file and ROOT your application to the home controller
+
 ```
 Rails.application.routes.draw do
   root 'home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 ```
+
 4. We now need to load our ```hello_react.jsx``` file to the HOME view, so let's include that now.
+
 ``` app/views/home/index.html.erb
 <%= javascript_pack_tag "hello_react.jsx" %>
 ```
@@ -213,6 +219,7 @@ Personally, I don't like the structure of React in this concept, so let's add so
 1. Delete all of the contents inside the javascript directory so we can start fresh. 
 2. Create 2 new folders named ```components``` and `packs` inside the javascript folder.
 3. Inside your `packs` folder, create a file named ```application.js``` and add the following to it:
+4. 
 ```js
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -224,6 +231,7 @@ ActiveStorage.start()
 ```
 
 Let's also create a hello_react.jsx file and add the following:
+
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -318,6 +326,7 @@ export default MovieInfo;
     .catch(error => console.log(error))
   }
 ```
+
 4. Our final file should look like this.
 
 ```js
@@ -357,10 +366,10 @@ export class MovieInfo extends React.Component {
 }
 export default MovieInfo;
 
-
-
 ```
+
 5. Import the file to our `App.js` file.
+
 ```js
 import React, { Component } from 'react'
 import MovieInfo from './MovieInfo'. <------
@@ -387,8 +396,9 @@ export default App
 
 
 
-💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘
-Congratulations! Our Rails API and React Client is done! If you enjoyed this API tutorial please give it a star and share it with your friends!
+💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘 <br>
+Congratulations! Our Rails API and React Client is done!  <br>
+If you enjoyed this API tutorial please give it a star and share it with your friends!
 
 
 ## Contributing
