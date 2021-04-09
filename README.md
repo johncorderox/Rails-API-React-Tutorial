@@ -26,9 +26,9 @@ gem "rails", "~> 6.1.3"
 
 Now that have our virtual enviorment ready, we can create our first ever Rails API. The new rails api command scaffolds everything we need to get up and ready for our project. Let's start our vagrant server and ssh into our project folder.
 
-1.  Run the following: `rails new my_app --api -T --database=postgresql`
+1.  Run the following: `rails new my_app -T --database=postgresql`
 
-What's going on here? The `--api` command tells rails that we want an API structure application instead of a standard rails structure. The `-T` command also tells rails that we don't want Minitest as our testing suite. You'll most likely be used to Rspec so we'll talk about that later in the guide. The ```--database=postgresql` line is pretty much self explanatory!
+What's going on here?  The `-T` command also tells rails that we don't want Minitest as our testing suite. You'll most likely be used to Rspec so we'll talk about that later in the guide. The ```--database=postgresql``` line is pretty much self explanatory!
 
 ## Rails API Versioning
 
@@ -141,12 +141,83 @@ Congrats! You have successfully created a Rails API and completed your first GET
 
 ## Webpacker/React Integration
 
-React is a component based front end framework that makes it easy to make frontend calls to our Rails API. Let's make this organized as possible and add our react directory inside our rails app.
+React is a component based front end framework that makes it easy to make frontend calls to our Rails API. Let's make this organized as possible and add our react directory inside our rails ```app/javascript``` directory.
 
-1.  Open your terminal and create a new project inside your API.
+1.  Open your terminal and run the following webpacker commands to init the React Process.
 
-xxxxxxxxxx start react webpacker here
 ```
+bundle exec rails webpacker:install:react
+```
+
+And wait for the ```Webpacker now supports react.js 🎉``` message to finally use React! Woah :) 
+
+2. Locate the javascript directory inside /app and see the new file we have with React.
+
+<b>Note:</b> Notice the H1 tag on the ```Hello {props.name}!```, this is so we can see it clearly. When intalling, the H1 tag will not be there. It is purely cosmetic for now. 
+
+```
+# app/javascript/packs/hello_react.jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
+
+const Hello = props => (
+  <div><h1>Hello {props.name}!</h1></div>
+)
+
+Hello.defaultProps = {
+  name: 'David'
+}
+
+Hello.propTypes = {
+  name: PropTypes.string
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <Hello name="React" />,
+    document.body.appendChild(document.createElement('div')),
+  )
+})
+```
+We can hook this file into any view we want React to send, so lets try this out now and add this to a demo view.
+
+3. Let's create a Home controller + view so can we load React to it. Run the following 
+```
+rails g controller Home index
+```
+and locate your routes in ```config/routes.rb```
+
+Open the route file and ROOT your application to the home controller
+```
+Rails.application.routes.draw do
+  root 'home#index'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end
+```
+4. We now need to load our ```hello_react.jsx``` file to the HOME view, so let's include that now.
+``` app/views/home/index.html.erb
+<%= javascript_pack_tag "hello_react.jsx" %>
+```
+
+5. Run the rails server, and check out the React magic at hand! YAHOO!!
+
+<img src="https://i.ibb.co/DLPVvXr/Screen-Shot-2021-04-09-at-3-11-22-PM.png" alt="Screen-Shot-2021-04-09-at-3-11-22-PM" border="0"></a><br /><br />
+
+React has been linked, successfully. You can take a small break now if you wish. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 This should be everything we need to setup the API. Simply click our test api call button and see the magic work!
 
 Congratulations! Our Rails API and React Client is done! If you enjoyed this API tutorial please give it a star and share it with your friends!
