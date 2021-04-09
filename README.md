@@ -283,7 +283,6 @@ export class MovieInfo extends React.Component {
    }
 
   render() {
-    let album = this.state.album;
     return (
       <div>
       </div>
@@ -329,7 +328,7 @@ export class MovieInfo extends React.Component {
   constructor() {
      super();
      this.state = {
-       album: []
+       movies: []
      };
    }
 
@@ -338,17 +337,16 @@ export class MovieInfo extends React.Component {
     .then(resp => resp.json())
     .then(a => {
       this.setState({
-        album: a
+        movies: a
       })
     })
     .catch(error => console.log(error))
   }
 
   render() {
-    let album = this.state.album;
     return (
       <div>
-      {this.state.api.map(obj =>
+      {this.state.movies.map(obj =>
         <p key={obj.id}>{obj.name}</p>
 
       )}
@@ -360,11 +358,31 @@ export class MovieInfo extends React.Component {
 export default MovieInfo;
 
 
+
 ```
 5. Import the file to our `App.js` file.
 ```js
+import React, { Component } from 'react'
+import MovieInfo from './MovieInfo'. <------
+
+
+class App extends Component {
+  render(){
+    return(
+      <div>
+        <MovieInfo /> <------
+      </div>
+
+    )
+  }
+}
+
+export default App
+
 ```
 
+
+6. Start the rails server! And Success!! We can now make API calls to our backend!
 
 
 
