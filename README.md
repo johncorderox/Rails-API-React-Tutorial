@@ -18,8 +18,7 @@ gem "rails", "~> 6.1.3"
 
 ## Table of Contents
 - [Creating a Rails API](#rails-api)
-- [Create a react frontend](#create-a-react-frontend)
-- [Connect the API with React](#downloading-react-into-our-project)
+- [Webpacker/React Integration](#Webpacker/React Integration)
 - [Contributing](#contributing)
 
 ## Rails API 💎
