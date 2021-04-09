@@ -1,2 +1,0 @@
-class Movie < ApplicationRecord
-end
