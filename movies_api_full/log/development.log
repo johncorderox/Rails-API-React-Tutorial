@@ -717,3 +717,72 @@ Processing by Api::V1::MoviesController#index as */*
 Completed 200 OK in 29ms (Views: 11.7ms | ActiveRecord: 8.6ms | Allocations: 6701)
 
 
+Started GET "/" for 10.0.2.2 at 2021-04-10 04:00:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1942)
+  Rendered layout layouts/application.html.erb (Duration: 134.5ms | Allocations: 18778)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms | Allocations: 21504)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/" for 10.0.2.2 at 2021-04-10 04:02:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /vagrant/Rails-API-React-Tutorial/movies_api_full/public/packs
+[Webpacker] Hash: ea34757f6ab3f3182ba1
+Version: webpack 4.46.0
+Time: 5661ms
+Built at: 04/10/2021 4:02:14 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f07114d739e2645c206b.js    123 KiB  application  [emitted] [immutable]  application
+js/application-f07114d739e2645c206b.js.map    138 KiB  application  [emitted] [dev]        application
+    js/hello_react-62601e019fa4df1c2ecd.js   1.06 MiB  hello_react  [emitted] [immutable]  hello_react
+js/hello_react-62601e019fa4df1c2ecd.js.map   1.22 MiB  hello_react  [emitted] [dev]        hello_react
+                             manifest.json  703 bytes               [emitted]              
+Entrypoint application = js/application-f07114d739e2645c206b.js js/application-f07114d739e2645c206b.js.map
+Entrypoint hello_react = js/hello_react-62601e019fa4df1c2ecd.js js/hello_react-62601e019fa4df1c2ecd.js.map
+[./app/javascript/packs/application.js] 473 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 527 bytes {hello_react} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 14 hidden modules
+
+  Rendered home/index.html.erb within layouts/application (Duration: 8140.3ms | Allocations: 2924)
+  Rendered layout layouts/application.html.erb (Duration: 8156.5ms | Allocations: 6188)
+Completed 500 Internal Server Error in 8159ms (ActiveRecord: 0.0ms | Allocations: 6634)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/" for 10.0.2.2 at 2021-04-10 04:03:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1672)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 111.6ms | Allocations: 12470)
+Completed 200 OK in 113ms (Views: 112.4ms | ActiveRecord: 0.0ms | Allocations: 12859)
+
+
+Started GET "/api/v1/movies" for 10.0.2.2 at 2021-04-10 04:03:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::MoviesController#index as */*
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/v1/movies_controller.rb:10:in `index'
+Completed 200 OK in 23ms (Views: 9.3ms | ActiveRecord: 6.3ms | Allocations: 6853)
+
+
