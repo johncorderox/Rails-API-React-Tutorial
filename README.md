@@ -392,12 +392,12 @@ export default App
 
 
 6. Start the rails server! And Success!! We can now make API calls to our backend!
-<img src="https://i.ibb.co/ys2SQFd/Screen-Shot-2021-04-09-at-3-47-16-PM.png" alt="Screen-Shot-2021-04-09-at-3-47-16-PM" border="0">
+<img src="https://i.ibb.co/ys2SQFd/Screen-Shot-2021-04-09-at-3-47-16-PM.png" width="300" alt="Screen-Shot-2021-04-09-at-3-47-16-PM" border="0">
 
 
 
-💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘 <br>
-Congratulations! Our Rails API and React Client is done!  <br>
+💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘💘 <br><br>
+Congratulations! Our Rails API and React Client is done!  <br><br>
 If you enjoyed this API tutorial please give it a star and share it with your friends!
 
 
