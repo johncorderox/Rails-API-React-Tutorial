@@ -17,9 +17,13 @@ gem "rails", "~> 6.1.3"
 ```
 
 ## Table of Contents
-- [Creating a Rails API](#rails-api)
+- [Creating a Rails API](#rails-api-)
+- [Rails API Versioning](#rails-api-versioning)
 - [React Integration](#react-integration)
+- [Restructure our React Project](#restructure-our-react-project)
+- [Our First Component](#our-first-component)
 - [Contributing](#contributing)
+- [About the Author](#about-the-author)
 
 ## Rails API 💎
 
