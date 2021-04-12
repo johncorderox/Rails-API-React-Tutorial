@@ -415,5 +415,6 @@ I love collaboration! Please feel free to contribute or add your insights ✨
 
 ## About the Author
 
-I am a Software Engineer based in Los Angeles who can't stop building in rails 💎. You can find my site <a href="https://johncorderox.com">here.</a> 
+**John Cordero** © [johncorderox](https://johncorderox.com), Released under the [MIT](./LICENSE) License.<br>
 
+> Blog [@jc](https://johncorderox.com) · GitHub [@johncorderox](https://github.com/metowolf) ·
