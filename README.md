@@ -207,7 +207,7 @@ end
 4. We now need to load our ```hello_react.jsx``` file to the HOME view, so let's include that now.
 
 ``` app/views/home/index.html.erb
-<%= javascript_pack_tag "hello_react.jsx" %>
+<%= javascript_pack_tag "hello_react" %>
 ```
 
 5. Run the rails server, and check out the React magic at hand! YAHOO!!
