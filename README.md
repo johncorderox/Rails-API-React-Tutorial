@@ -28,7 +28,7 @@ gem "rails", "~> 6.1.3"
 
 ## Rails API 💎
 
-Now that have our virtual enviorment ready, we can create our first ever Rails API. The new rails api command scaffolds everything we need to get up and ready for our project. Let's start our vagrant server and ssh into our project folder.
+The new rails api command scaffolds everything we need to get up and ready for our project. Let's start our rails server and being integrating the backend first.
 
 1.  Run the following: `rails new my_app -T --database=postgresql`
 
@@ -36,7 +36,7 @@ What's going on here?  The `-T` command also tells rails that we don't want Mini
 
 ## Rails API Versioning
 
-Versioning is the process of seperating and creating new features/data/endpoints for your API. Since this is our first API, let's make our `test-api` v1.
+Versioning is the process of seperating and creating new features/data/endpoints for your API. Since this is our first API, let's make our rails api v1.
 
 1.  Run the following in your terminal
 
