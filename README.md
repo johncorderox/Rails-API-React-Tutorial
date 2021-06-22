@@ -451,12 +451,12 @@ You should see that only the ```id``` and ```name``` attribute is being returned
             rating: 5
           },
           {
-            id: 2
+            id: 2,
             name: "The Titanic",
             rating: 5
           },
           {
-            id: 3
+            id: 3,
             name: "Venom",
             rating: 4
           }
