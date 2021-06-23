@@ -376,14 +376,16 @@ export default MovieInfo;
 
 ```js
 import React, { Component } from 'react'
-import MovieInfo from './MovieInfo'. <------
+// Here V
+import MovieInfo from './MovieInfo'.
 
 
 class App extends Component {
   render(){
     return(
       <div>
-        <MovieInfo /> <------
+      // And Here V
+        <MovieInfo />
       </div>
 
     )
