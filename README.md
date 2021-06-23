@@ -446,23 +446,26 @@ We have our Movie Class inheriting from the serializer class on the first line, 
 You should see that only the ```id``` and ```name``` attribute is being returned from the database.
 
 ```json
-{ movies:
+
+{ "movies":
+        [
           {
-            id: 1,
-            name: "The Nightmare Before Christmas",
-            rating: 5
+            "id": 1,
+            "name": "The Nightmare Before Christmas",
+            "rating": 5
           },
           {
-            id: 2,
-            name: "The Titanic",
-            rating: 5
+            "id": 2,
+            "name": "The Titanic",
+            "rating": 5
           },
           {
-            id: 3,
-            name: "Venom",
-            rating: 4
+            "id": 3,
+            "name": "Venom",
+            "rating": 4
           }
- }
+        ]
+ }      
 ```
 
 We are done! What is the takeaway? 
