@@ -1,1 +1,1 @@
-*.gs linguist-language=Ruby
+.js linguist-detectable=false
