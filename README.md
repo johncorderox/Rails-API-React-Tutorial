@@ -23,6 +23,7 @@ gem "rails", "~> 6.1.3"
 - [Restructure our React Project](#restructure-our-react-project)
 - [Our First Component](#our-first-component)
 - [Rails Serializers](#rails-serializers)
+- [Generate API Key](#generate-api-key)
 - [Contributing](#contributing)
 - [About the Author](#about-the-author)
 
@@ -470,6 +471,9 @@ You should see that only the ```id``` and ```name``` attribute is being returned
 
 We are done! What is the takeaway? 
 React will be fetching a lot of JSON data and we can reduce the uneeded attributes like `created_at` or `updated_at` that does not need to be displayed on the page.
+
+## Generate API key
+What is an API key? Well in simple terms, the key is a string that is encrypted for accessing data anonymously. This is a great way to secure our API and remove any malicious and sketchy users who wish to abuse the application as well. There are many ways to create an API key, but for this tutorial we can generate a basic and easy implementation to understand the gist of its logic.
 
 
 ## Contributing
